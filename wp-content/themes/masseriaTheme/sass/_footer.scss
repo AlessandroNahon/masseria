@@ -1,0 +1,48 @@
+#footer {
+	position: relative;
+	z-index: 99;
+	left:0;
+	height:100vh; 
+	width: 100vw;  
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	@include breakpoint($tablet) {
+		background-attachment: local;
+		background-position: 40% bottom;
+	}
+	@include breakpoint($phone) {
+		background-attachment: local;
+		background-position: 40% bottom;
+	}
+}
+
+footer {
+	position: relative !important;
+	bottom: 56px !important;
+	right:0 !important;
+	text-align: right !important;
+	z-index: 999 !important;
+	display: block !important;
+	width: 100vw !important;
+	.container {
+		width: 100% !important;
+		padding-right: 20px !important;
+		text-align: right !important;
+		position: absolute !important;
+		right:0 !important;
+	}
+	p,a {
+		text-align: right !important;
+		color:#e9e6d8 !important;
+		font-family: 'FoundersGrotesk-Regular', sans-serif !important;
+	}
+	a {
+		cursor: pointer !important;
+		transition: .3s ease-in-out !important;
+		&:hover {
+			color: #8a2012 !important;
+		}
+	}
+}

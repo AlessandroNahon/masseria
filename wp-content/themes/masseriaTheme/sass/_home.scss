@@ -1,0 +1,126 @@
+@import 'breakpoints';
+
+#home {
+	// position: relative;
+	// top:0; 
+	height:100vh; 
+	width: 100vw;  
+	background-position: center;
+	background-size: cover;
+	// .circle {
+	// 	overflow: hidden;
+	// 	position: fixed;
+	// 	z-index: 100;
+	// 	left: 50%;
+	// 	transform: translateX(-50%);
+	// 	top: -250px;
+	// 	// width: 90%;
+	// 	width: 1300px;
+	// 	border: 1px solid #e9e6d8;
+	// 	opacity: .5;
+	// 	border-radius: 50%/50%; 
+	// 	transition: .5s linear;
+	// 	&:after {
+	// 		content: "";
+	// 		display: block;
+	// 		padding-bottom: 100%;
+	// 	}
+	// 	@include breakpoint($desktop) {
+	// 		width: 1200px;
+	// 	}
+	// 	@include breakpoint($phone-tablet) {
+	// 		top: -100px;
+	// 		width: 1000px;
+	// 	}
+	// 	@include breakpoint($tablet) {
+	// 		top:-10px;
+	// 		width: 1200px;
+	// 	}
+	// }
+	img {
+		transition: .5s cubic-bezier(0,0,0,0.5);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 450px;
+		@include breakpoint($large-desktop) {
+			width: 30%;
+		}
+	}
+}
+
+#home-text {
+	background-color: #8a2012;
+	width: 100vw;
+	// height: 75vh;
+	@include breakpoint($large-desktop) {
+		height: 75vh;
+	}
+	@include breakpoint($tablet) {
+		height: 75vh;
+	}
+	@include breakpoint($phone) {
+		height: 75vh;
+		.inner-wrapper {
+			width: 285px;
+		}
+	}
+	@include breakpoint($iPhone) {
+		height: 100vh;
+	}
+	p {
+		font-family: 'FoundersGrotesk-Light', sans-serif;
+		width: 650px;
+		margin:0;
+		padding-top: 275px;
+		padding-bottom: 275px;
+		color: #e9e6d8;
+		font-size: 40px;
+		font-weight: lighter;
+		letter-spacing: 1px;
+		line-height: 56px;
+		@include breakpoint($large-desktop) {
+			font-family: 'FoundersGrotesk-Light', sans-serif;
+			font-weight: 200;
+			font-size: 3rem;
+			line-height: 4.5rem;
+			width: 800px;
+			// font-size: 60px;
+			// line-height: 80px;
+			padding-top: 23%;
+			margin-bottom: 6%;
+
+		}
+		@include breakpoint($tablet) {
+			width: 500px;
+			padding-top: 250px;
+		}
+		@include breakpoint($phone-tablet) {
+			padding-top: 175px;
+			margin:0;
+		}
+		@include breakpoint($phone) {
+			font-family: 'FoundersGrotesk-Light', sans-serif;
+			// font-size: 30px;
+			font-size: 28px;
+			line-height: 40px;
+			font-weight: lighter;
+			width: 277px;
+			padding-top: 125px;
+		}
+		@include breakpoint($iPhone) {
+			font-size: 24px;
+			font-weight: normal;
+			line-height: 30px;
+			width: 285px;
+			padding-top:180px;
+		}
+	} 
+}
+
+.active {
+	border: 1px solid #8a2012;
+	position: relative;
+	z-index: 100;
+}

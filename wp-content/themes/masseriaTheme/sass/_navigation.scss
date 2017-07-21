@@ -1,0 +1,183 @@
+@import 'breakpoints';
+header {
+	position: absolute;
+	width: 100%;
+	top: 100%;
+	z-index: 500;
+	.inner-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.desktop-nav {
+	ul.menu {
+		position: relative;
+		z-index: 100;
+		margin: 0;
+		padding: 0;
+		font-family: 'FoundersGrotesk-Light', sans-serif;
+		margin-top: 15px;
+		li {
+			position: relative;
+			z-index: 100;
+			display: inline;
+			font-size: 18px;
+			font-weight: lighter;
+			letter-spacing: .5px;
+			color: #e9e6d8;
+			padding-left: 30px;
+
+			// @include breakpoint($large-desktop) {
+			// 	font-size: 26px;
+			// }
+			a {
+				// padding-left: 30px;
+				// @include breakpoint($large-desktop) {
+				// 	padding-left: 40px;
+				// }
+			}
+		}
+	}
+	@include breakpoint($tablet) {
+		display: none;
+	}
+	@include breakpoint($phone) {
+		display: none;
+	}
+}
+
+.main-nav-scrolled {
+	background-color: transparent !important;
+  	position: fixed;
+  	width: 100%;
+  	top: 0;
+}
+
+.nav-up {
+    top: -100px;
+}
+
+.logo-nav {
+	transition: .2s linear;
+	width: 200px;
+	position: relative;
+	padding:0;
+	margin:0;
+	left:-20px;
+	bottom:0;
+	z-index: 100;
+	// @include breakpoint($large-desktop) {
+	// 	width: 400px;
+	// }
+	@include breakpoint($tablet) {
+		display: none;
+	}
+	@include breakpoint($phone) {
+		display: none;
+	}
+}
+
+.logo-nav-dark {
+	display: none;
+	transition: .2s linear;
+	width: 200px;
+	position: relative;
+	padding:0;
+	margin:0;
+	left:-20px;
+	bottom:0;
+	z-index: 100;
+	// @include breakpoint($large-desktop) {
+	// 	width: 400px;
+	// }
+	@include breakpoint($tablet) {
+		display: none;
+	}
+	@include breakpoint($phone) {
+		display: none;
+	}
+}
+
+.mobile-nav {
+	position: fixed;
+	top:0;
+	right:0;
+	background-color: #e9e6d8;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	@include breakpoint($tablet) {
+		display: block;
+	}
+	@include breakpoint($phone) {
+		display: block;
+	}
+	ul {
+		position: relative;
+		top: 20%;
+		transform: translateY(-20%);
+		list-style: none;
+		padding-left: 0;
+		font-size: 30px;
+		letter-spacing: 1px;
+		@include breakpoint($tablet) {
+			top: 25%;
+			transform: translateY(-25%);
+		}
+		@include breakpoint($phone) {
+			top: 25%;
+			transform: translateY(-25%);
+		}
+		li {
+			text-align: center;
+			display: block;
+			border-bottom: 1px solid rgba(138,32,18,0.5);
+			width: 60%;
+			margin:0 auto;
+			&:last-child {
+				border-bottom: 1px solid transparent;
+			}
+			a {
+				font-size: 40px;
+				line-height: 120px;
+				// padding-bottom: 40px;
+				padding-top: 15px;
+				display: inline-block;
+				color: #8a2012;
+				font-family: 'FoundersGrotesk-Light', sans-serif;
+				@include breakpoint($phone) {
+					font-size: 30px;
+					line-height: 60px;
+				}
+			}
+		}
+	}
+}
+
+.hamburger {
+	display: none;
+	position: fixed;
+	cursor: pointer;
+	top:40px;
+	right: 40px;
+	z-index: 100;
+	width: 26px;
+	height: 16px;
+	span {
+		height: 2px;
+		width: 26px;
+		background-color: #e9e6d8;
+		position: absolute;
+		display: block;	
+	}
+	@include breakpoint($tablet) {
+		display: block;
+	}
+	@include breakpoint($phone) {
+		display: block;
+		right: 20px;
+	}
+}
+

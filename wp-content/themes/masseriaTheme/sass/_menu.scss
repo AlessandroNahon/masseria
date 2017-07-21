@@ -1,0 +1,582 @@
+@import 'breakpoints';
+
+#menu {
+	background-color: #e9e6d8;
+	position: relative;
+	left:0;
+	margin-top: -1px;
+	width: 100vw;
+	height: 225%;
+	padding-top: 100px;
+	font-family: 'FoundersGrotesk-Light', sans-serif;
+	@include breakpoint($large-desktop) {
+		padding-top: 300px;
+	}
+	@include breakpoint($phone) {
+		padding-top: 0;
+	}
+	@include breakpoint($iPhone) {
+		padding-top: 100px;
+	}
+	.menu-nav {
+		width: 75%;
+		padding-left: 20px;
+		margin: 0 auto;
+		@include breakpoint($large-desktop) {
+			width: 60%;
+		}
+		@include breakpoint($phone) {
+			padding-left: 0;
+			width: 81%;
+		}
+		h2 {
+			font-size: 30px;
+			line-height: 90px;
+			letter-spacing: 1px;
+			font-weight: lighter;
+		}
+		button {
+			outline: none;
+			border: none;
+			background-color: transparent;
+			color: inherit;
+			text-decoration: none;
+			font-weight: lighter;
+			padding:0;
+			&:focus {
+				border: none;
+			}
+		}
+		ul {
+			// display: flex;
+			// justify-content: space-between;
+			list-style: none;
+			padding-left: 0;
+			padding-bottom: 50px;
+			width: 500px;
+			font-weight: lighter;
+			font-size: 20px;
+			letter-spacing: 1px;
+			position: relative;
+			left:0;
+			z-index: 110;
+			@include breakpoint($tablet) {
+				width: 400px;
+			}
+			@include breakpoint($phone) {
+				width: 327px;
+				font-size: 16px;
+			}
+			@include breakpoint($iPhone) {
+				width: 275px;
+			}
+			li {
+				display: inline-block;
+				cursor: pointer;
+				transition: .2s linear;
+				border-bottom: 1px solid transparent;
+				&:first-child {
+					margin-right: 32px;
+				}
+				&:last-child {
+					margin-left: 32px;
+				}
+				@include breakpoint($phone) {
+					margin:0;
+					padding:0;
+					&:first-child {
+						margin-right: 8px;
+					}
+					&:last-child {
+						margin-left: 8px;
+					}
+
+				}
+				&:hover {
+					color: #8a2012;
+					border-bottom: 1px solid #8a2012;
+				}
+			}
+			.active-tab {
+				color: #8a2012;
+				border-bottom: 1px solid #8a2012;
+				// @include breakpoint($phone) {
+				// 	border-bottom: 1px solid transparent;
+				// }
+			}
+
+		}
+	}
+	.menu-header {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+	}
+	.menu-pdf {
+		position: relative;
+		right:0;
+		left:0;
+		top:0;
+		padding:0;
+		margin:0;
+		// position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		// left: 77%;
+		// top: 120px;
+		width: 150px;
+		text-align: center;
+		border: 1px solid #000;
+		padding:0;
+		padding-top: 15px;
+		padding-bottom: 8px;
+		cursor: pointer;
+		transition: .2s linear;
+			@include breakpoint($large-desktop) {
+				position: relative;
+				right:0;
+				left:0;
+				top:0;
+				padding:0;
+				margin:0;
+				// padding:0;
+				// padding-top: 15px;
+				// padding-bottom: 15px;
+			}
+			@include breakpoint($tablet) {
+				// left: 68%;
+				padding:0;
+				padding-top: 15px;
+				padding-bottom: 10px;
+			}
+			@include breakpoint($phone) {
+				// position: absolute;
+				// top: 16px;
+				// left:50%;
+				padding:0;
+				padding-top: 15px;
+				padding-bottom: 15px;
+			}
+			@include breakpoint($iPhone) {
+				width: 125px;
+				// top: 125px;
+				// left:51.5%;
+				padding:0;
+				padding-top: 15px;
+				padding-bottom: 10px;
+			}
+		a {
+			letter-spacing: .4px;
+			color: #000;
+			@include breakpoint($large-desktop) {
+				padding:0;
+				padding-top: 15px;
+				padding-bottom: 15px;
+			}
+			@include breakpoint($iPhone) {
+				font-size: 14px;
+			}
+		}
+		&:hover {
+			border-color: #8a2012;
+			a {
+				color: #8a2012;
+			}
+		}
+	}
+	.inner-wrapper {
+		display: flex;
+		flex-direction: column;
+		flex-wrap:wrap;
+		.menu-section {
+			visibility: hidden;
+			display: none;
+			width: 100%;
+			position: relative;
+			z-index: 102;
+			padding-bottom: 25px;
+			@include breakpoint($large-desktop) {
+				padding-bottom: 50px;
+			}
+			h2 {
+				font-family: 'FoundersGrotesk-Regular', sans-serif;
+				border-bottom: 1px solid #000;
+				padding-bottom: 10px;
+				letter-spacing: 1.5px;
+				text-transform: uppercase;
+				font-size: 20px;
+				display: flex;
+				justify-content: space-between;
+				align-content:center;
+				align-items: center;
+				.menu-size {
+					font-size: 12px;
+				}
+				@include breakpoint($phone) {
+					padding-bottom: 10px;
+				}
+			}
+			.menu-items {
+				padding-top: 25px;
+				@include breakpoint($large-desktop) {
+					padding-top: 0;
+				}
+			}
+			.menu-item {
+				width: 425px;
+				height: 100px;
+				margin: 0;
+				@include breakpoint($large-desktop) {
+					font-size: 1.25rem;
+					line-height: 1.25rem;
+					margin: 20px 0;
+				}
+				.menu-box {
+					display: flex;
+					justify-content: space-between;
+					@include breakpoint($large-desktop) {
+						width: 500px;
+					}
+					@include breakpoint($tablet) {
+						width: 100%;
+					}
+					p {
+						font-weight: bold;
+						display: block;
+						&:nth-child(2) {
+							width: 36px;
+							text-align: center;
+						}
+					}
+					.name, .price {
+						font-family: 'FoundersGrotesk-Regular', sans-serif;
+						@include breakpoint($large-desktop) {
+							line-height: 60px;
+						}
+					}
+					.price {
+						@include breakpoint($iPhone) {
+							padding-left: 10px;
+						}
+					}
+				}
+				.description {
+					padding-top: 0;
+					margin-top: -15px;
+					width: 375px;
+					@include breakpoint($large-desktop) {
+						margin-top: -30px;
+					}
+					@include breakpoint($tablet) {
+						width: 100%;
+					}
+					@include breakpoint($phone) {
+						font-size: 13px;
+						width: 250px;
+					}
+					@include breakpoint($iPhone) {
+						width: 240px;
+					}
+				}
+				@include breakpoint($phone) {
+					width: 300px;
+				}
+				@include breakpoint($iPhone) {
+					width: 260px;
+				}
+			}
+		}
+		.Pizze {
+			visibility: visible;
+			display: block;
+			// @include breakpoint($large-desktop) {
+			// 	width: 50%;
+			// }
+			.menu-items {
+				display: flex;
+				flex-wrap:wrap;
+				justify-content: space-between;
+				align-content: flex-start;
+				height: auto;
+				width: 90%;
+				@include breakpoint($large-desktop) {
+					width: 1200px;
+				}
+				@include breakpoint($tablet) {
+					width: 100%;
+				}
+				@include breakpoint($phone) {
+					width: 100%;	
+				}
+				.menu-item {
+					@include breakpoint($tablet) {
+						width: 100%;
+					}
+
+				}
+			}
+		}
+		.Assaggi {
+			visibility: visible;
+			display: block;
+			// @include breakpoint($large-desktop) {
+			// 	width: 50%;
+			// }
+			.menu-items {
+				display: flex;
+				flex-wrap:wrap;
+				justify-content: space-between;
+				align-content: flex-start;
+				height: 50%;
+				width: 90%;
+				@include breakpoint($large-desktop) {
+					width: 1200px;
+				}
+				@include breakpoint($tablet) {
+					width: 100%;
+				}
+				.menu-item {
+					width: 425px;
+					height: 75px;
+					margin: 0;
+					@include breakpoint($tablet) {
+						width: 100%;
+					}
+
+				}
+			}
+		}
+		.Panino {
+			visibility: visible;
+			display: block;
+			.menu-items {
+				display: flex;
+				flex-wrap:wrap;
+				justify-content: space-between;
+				align-content: flex-start;
+				height: auto;
+				width: 90%;
+				@include breakpoint($large-desktop) {
+					width: 1200px;
+				}
+				@include breakpoint($tablet) {
+					width: 100%;
+				}
+				@include breakpoint($phone) {
+					width: 100%;	
+				}
+				.menu-item {
+					@include breakpoint($tablet) {
+						width: 100%;
+					}
+
+				}
+			}
+		}
+		.Insalate {
+			visibility: visible;
+			display: block;
+			h2 {
+				display: block;
+				@include breakpoint($tablet) {
+					display: flex;
+					width: 100%;
+					justify-content:space-between;
+				}
+				@include breakpoint($phone) {
+					display: flex;
+					width: 100%;
+					justify-content:space-between;
+				}
+				.menu-size {
+					padding-left: 275px;
+					@include breakpoint($large-desktop) {
+						padding-left: 350px;
+					}
+					@include breakpoint($phone) {
+						padding-left: 0px;
+					}
+					@include breakpoint($iPhone) {
+						padding-left: 0px;
+					}
+				}
+			}
+			.menu-items {
+				display: flex;
+				flex-wrap:wrap;
+				justify-content: space-between;
+				align-content: flex-start;
+				height: auto;
+				width: 90%;
+				@include breakpoint($large-desktop) {
+					width: 1200px;
+				}
+				@include breakpoint($tablet) {
+					width: 100%;
+				}
+				@include breakpoint($phone) {
+					width: 100%;	
+				}
+				.menu-item {
+					@include breakpoint($tablet) {
+						width: 100%;
+					}
+
+				}
+			}
+		}
+		.Dolce {
+			visibility: visible;
+			display: block;
+			// @include breakpoint($large-desktop) {
+			// 	width: 50%;
+			// }
+			.menu-items {
+				display: flex;
+				flex-wrap:wrap;
+				justify-content: space-between;
+				align-content: flex-start;
+				height: 50%;
+				width: 90%;
+				@include breakpoint($large-desktop) {
+					width: 1200px;
+				}
+				@include breakpoint($tablet) {
+					width: 100%;
+				}
+				.menu-item {
+					width: 425px;
+					height: 75px;
+					margin: 0;
+					@include breakpoint($tablet) {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.Vino, .Birra, .Amaro, .Freddo, .Caldo {
+			width: 50%;
+			@include breakpoint($tablet) {
+				width: 100%;
+			}
+			@include breakpoint($phone) {
+				width: 100%;
+			}
+			.inner-wrapper {
+				height: 100vh;
+				@include breakpoint($large-desktop) {
+					height: 80vh;
+				}
+				@include breakpoint($tablet) {
+					height: 150vh;
+				}
+			}
+			.menu-items {
+				@include breakpoint($large-desktop) {
+					height: auto;
+				}
+				.menu-item {
+					height: 40px;
+					width: 100%;
+					@include breakpoint($large-desktop) {
+						width: 100%;
+						.menu-box {
+							width: 100%;
+						}
+					}
+					@include breakpoint($tablet) {
+						width: 100%;
+					}
+					@include breakpoint($phone) {
+						width: 100%;
+						.menu-box {
+							width: 100%;
+						}
+					}
+					@include breakpoint($iPhone) {
+						width: 250px;
+						.menu-box {
+							width: 250px;
+						}
+					}
+					.price {
+						@include breakpoint($iPhone) {
+							padding-left: 10px;
+						}
+					}
+				}
+			}
+		}
+		.Birra, .Amaro, .Freddo {
+			margin-top: 25px;
+		}
+		.Caldo {
+			@include breakpoint($large-desktop) {
+				margin-top: 25px;
+			}
+			@include breakpoint($tablet) {
+				margin-top: 25px;
+			}
+			@include breakpoint($phone) {
+				margin-top: 25px;
+			}
+		}
+		.Create {
+			width: 100%;
+			// @include breakpoint($large-desktop) {
+			// 	width: 50%;
+			// }
+			.inner-wrapper {
+				// @include breakpoint($large-desktop) {
+				// 	height: 65vh;
+				// }
+				@include breakpoint($tablet) {
+					height: auto;
+				}
+			}
+			.menu-items {
+				display: flex;
+				flex-direction: column;
+				flex-wrap:wrap;
+				height: 100vh;
+				@include breakpoint($large-desktop) {
+					height: 80vh;
+					// width: 100%;
+				}
+				@include breakpoint($tablet) {
+					height: 100vh;
+				}
+				@include breakpoint($phone-tablet) {
+					height: 115vh;
+				}
+				@include breakpoint($phone) {
+					height: 300vh;
+				}
+				.menu-item {
+					height: auto;
+					width: 300px;
+					@include breakpoint($large-desktop) {
+						width: 300px;
+						.menu-box {
+							.description {
+								width: 200px;
+							}
+						}
+					}
+					@include breakpoint($tablet) {
+						width: 250px;
+					}
+					@include breakpoint($phone) {
+						width: 100%;
+						.menu-box {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

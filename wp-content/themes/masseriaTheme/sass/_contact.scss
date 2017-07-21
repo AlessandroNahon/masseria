@@ -1,0 +1,241 @@
+@import 'breakpoints';
+
+#contact {
+	background-color: #e9e6d8;
+	margin-top: -1px;
+	padding-top: 100px;
+	left:0;
+	width: 100vw;
+	font-family: 'FoundersGrotesk-Light', sans-serif;
+		@include breakpoint($large-desktop) {
+			// height: auto;
+		}
+		@include breakpoint($desktop) {
+			// height: 55vh;
+		}
+		@include breakpoint($phone-tablet) {
+			// height: 75vh;
+		}
+		@include breakpoint($tablet) {
+			height: 60vh;
+		}
+		@include breakpoint($phone) {
+			height: auto;
+			padding-top: 50px;
+		}
+
+	h2 {
+		font-weight: lighter;
+		font-size: 40px;
+		line-height: 56px;
+		width: 500px;
+		// @include breakpoint($large-desktop) {
+		// 	font-family: 'FoundersGrotesk-Regular', sans-serif;
+		// 	font-weight: lighter;
+		// 	font-size: 60px;
+		// 	line-height: 80px;
+		// 	width: 600px;
+		// }
+		@include breakpoint($phone) {
+			font-family: 'FoundersGrotesk-Regular', sans-serif;
+			font-weight: normal;
+			font-size: 28px;
+			line-height: 40px;
+			width: 300px;
+			padding-bottom: 55px;
+		}
+		@include breakpoint($iPhone) {
+			width: 260px;
+		}
+	}
+	.inner-content {
+		display: flex;
+		justify-content: space-between;
+		// align-items: flex-start;
+		width: 50%;
+		padding-top: 100px;
+		position: relative;
+		z-index: 100;
+		@include breakpoint($large-desktop) {
+			width: 100%;
+		}
+		@include breakpoint($tablet) {
+			flex-direction: column;
+			width: 400px;
+			padding-top: 0;
+		}
+		@include breakpoint($phone) {
+			flex-direction: column;
+			width: 300px;
+			height: auto;
+			padding-top: 0;
+		}
+		@include breakpoint($iPhone) {
+			width: 260px;
+		}
+		.location-info, .social-info {
+			display: flex;
+			justify-content: space-beteween;
+			width:100%;
+			@include breakpoint($large-desktop) {
+				width: 1000px;
+			}
+			@include breakpoint($phone) {
+				flex-direction: column;
+				width: 250px;
+				height: auto;
+			}
+		}
+		.contact-us, .social, .location, .find-us {
+			width: 250px;
+			@include breakpoint($large-desktop) {
+				width: 1000px;
+			}
+		}
+		.find-us, .social {
+			// margin-right: -150px;
+			// @include breakpoint($tablet) {
+			// 	margin-right: -50px;
+			// }
+			@include breakpoint($phone) {
+				margin-right:0;
+			}
+		}
+		.contact-us {
+			// margin-right: 150px;
+			// padding-left: 50px;
+			@include breakpoint($phone) {
+				margin-bottom: 15px;
+			}
+			p {
+				padding:0;
+				margin:0;
+				line-height: auto;
+				width: 200px;
+				@include breakpoint($phone) {
+					padding: 10px 0;
+					color: '#8a2012';
+				}
+ 				&:hover {
+					color:'#8a2012';
+				}
+			}
+			@include breakpoint($tablet) {
+				margin-right: 0px;
+				padding-left: 0px;
+				a, p {
+					color:'#8a2012';
+				}
+			}
+			@include breakpoint($phone) {
+				margin-right: 0px;
+				padding-left: 0px;
+				a, p {
+					color:'#8a2012';
+					line-height: 0;
+					padding-top: 20px;
+				}
+			}
+		}
+		h3 {
+			font-size: 14px;
+			font-family: 'FoundersGrotesk-Medium', sans-serif;
+			// @include breakpoint($large-desktop) {
+			// 	font-size: 16px;
+			// 	font-family: 'FoundersGrotesk-Regular', sans-serif;
+			// 	font-weight: bold;
+			// }
+			@include breakpoint($large-desktop) {
+				font-size: 1.25rem;
+				line-height: 1.25rem;
+			}
+			@include breakpoint($phone) {
+				font-family: 'FoundersGrotesk-Regular', sans-serif;
+				font-weight: bold;
+			}
+		}
+		ul {
+			position: relative;
+			z-index: 100;
+			list-style: none;
+			padding-left: 0;
+			width: 80px;
+			font-size: 18px;
+			@include breakpoint($large-desktop) {
+				font-size: 1.25rem;
+				line-height: 1.25rem;
+				width: 100px;
+			}
+			// @include breakpoint($large-desktop) {
+			// 	font-size: 26px;
+			// 	line-height: 46px;
+			// 	width: 300px;
+			// }
+			li {
+				cursor: pointer;
+				line-height: 30px;
+				padding:0;
+				font-weight: lighter;
+				transition: .2s linear;
+				width: 0%;
+				border-bottom: 1px solid transparent;
+				letter-spacing: .5px;
+				&:hover {
+					width: 25%;
+					color: #8a2012;
+					border-bottom: 1px solid #8a2012;
+				}
+				// @include breakpoint($large-desktop) {
+				// 	font-size: 26px;
+				// 	line-height: 46px;
+				// }
+				@include breakpoint($tablet) {
+					color: #8a2012;
+				}
+				@include breakpoint($phone) {
+					color: #8a2012;
+					font-size: 20px;
+					line-height: 30px;
+				}
+			}
+		}
+		p {
+			cursor: pointer;
+			font-size: 18px;
+			width: 120px;
+			line-height: 32px;
+			letter-spacing: .5px;
+			font-weight: lighter;
+			@include breakpoint($phone) {
+				color: #8a2012;
+			}
+		}
+		a {
+			color: #000;
+			&:hover {
+				color: #8a2012;
+			}
+		}
+		.location, .contact-us, .find-us, .social {
+			@include breakpoint($large-desktop) {
+				width: 300px;
+			}
+		}
+		.location a p {
+			// @include breakpoint($large-desktop) {
+			// 	font-size: 26px;
+			// 	line-height: 46px;
+			// 	width: 200px;
+			// }
+			@include breakpoint($tablet) {
+				color: #8a2012;
+			}
+			@include breakpoint($phone) {
+				color: #8a2012;
+				font-size: 20px;
+				line-height: 30px;
+				width: 220px;
+			}
+		}
+	}
+}

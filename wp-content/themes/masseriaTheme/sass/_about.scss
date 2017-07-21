@@ -1,0 +1,110 @@
+// #about-banner {
+// 	height:100vh; 
+// 	width: 100vw;
+// 	margin:0;  
+// 	background-position: center;
+// 	background-size: cover;
+// 	background-repeat: no-repeat;
+// 	@include breakpoint($tablet) {
+// 		height: 90vh;
+// 	}
+// }
+
+#about {
+	background-color: #e9e6d8;
+	// position: relative;
+	// top:-155px;
+	left:0;
+	width: 100vw;
+	// height: 100vh;
+	padding: 50px 0;
+	margin:0;
+	@include breakpoint($large-desktop) {
+		// height: 75vh;
+		padding-top: 15%;
+	}
+	@include breakpoint($phone) {
+		padding:0;
+	}
+	.chicken {
+		position: relative;
+		z-index: 101;
+		top: 100px;
+	}
+	.text {
+		// margin: 90px 0;
+		padding: 100px 0;
+		// @include breakpoint($large-desktop) {
+		// 	padding-top: 200px;
+		// }
+		p:nth-child(1) {
+			font-family: 'FoundersGrotesk-Light', sans-serif;
+			width: 600px;
+			font-size: 40px;
+			font-weight: 200;
+			letter-spacing: 1px;
+			line-height: 56px;
+			// @include breakpoint($large-desktop) {
+			// 	font-family: 'FoundersGrotesk-Regular', sans-serif;
+			// 	font-weight: lighter;
+			// 	font-size: 60px;
+			// 	line-height: 80px;
+			// 	width: 1000px;
+			// }
+			@include breakpoint($large-desktop) {
+				font-size: 3rem;
+				line-height: 4.5rem;
+				width: 675px;
+			}
+			@include breakpoint($tablet) {
+				width: 500px;
+			}
+			@include breakpoint($phone) {
+				font-weight: normal;
+				font-size: 28px;
+				line-height: 40px;
+				width: 300px;
+			}
+			@include breakpoint($iPhone) {
+				width: 250px;
+				font-size: 24px;
+				font-weight: normal;
+				line-height: 30px;
+			}
+		}
+		p:nth-child(2) {
+			font-family: 'FoundersGrotesk-Light', sans-serif;
+			padding-top: 50px;
+			width: 650px;
+			font-size: 20px;
+			font-weight: lighter;
+			letter-spacing: 1px;
+			line-height: 40px;
+			// @include breakpoint($large-desktop) {
+			// 	font-weight: lighter;
+			// 	font-size: 26px;
+			// 	line-height: 46px;
+			// 	width: 800px;
+			// }
+			@include breakpoint($large-desktop) {
+				font-size: 1.5rem;
+				line-height: 3rem;
+				width: 650px;
+			}
+			// @include breakpoint($large-desktop) {
+			// 	width: 700px;
+			// }
+			@include breakpoint($tablet) {
+				width: 500px;
+			}
+			@include breakpoint($phone) {
+				font-size: 18px;
+				line-height: 28px;
+				width: 300px;
+			}
+			@include breakpoint($iPhone) {
+				width: 260px;
+			}
+		}
+	}
+}

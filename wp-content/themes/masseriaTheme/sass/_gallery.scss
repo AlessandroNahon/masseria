@@ -1,0 +1,169 @@
+@import 'breakpoints';
+
+#gallery {
+	background-color: #e9e6d8;
+	position: relative;
+	// top: -105px;
+	left:0;
+	width: 100vw;
+	margin-top: -1px;
+	padding-top: 100px;
+	cursor: none;
+	@include breakpoint($large-desktop) {
+		height: 90vh;
+	}
+	@include breakpoint($phone) {
+		padding-top: 0;
+	}
+	.slider {
+		width: 100vw;
+		margin: 0 auto;
+		padding: 0;
+		position: relative;
+		z-index: 102;
+		cursor: none;
+		@include breakpoint($phone) {
+			height: 50vh;
+		}
+		@include breakpoint($iPhone) {
+			height: 30vh;
+		}
+		.slick-arrow {
+			cursor: none;
+			position: absolute;
+			background-color: transparent;
+			border: none !important;
+			outline: none !important;
+			font-size:0;
+			right:0;
+			width: 100vw;
+			height: 100px;
+			z-index: 100;
+			@include breakpoint($tablet) {
+				display: none;
+			}
+		}
+		.slick-prev {
+			position: absolute;
+			width: 50vw;
+			height: 600px;
+			background-color: transparent;
+			left:0;
+			top:0px;
+			@include breakpoint($tablet) {
+				display: none;
+			}
+		}
+		.slick-next {
+			position: absolute;
+			width: 50vw;
+			height: 600px;
+			background-color: transparent;
+			left:50%;
+			bottom:88px;
+			@include breakpoint($tablet) {
+				display: none;
+			}
+		}
+	}
+	.slick-slide {
+		outline: none;
+		@include breakpoint($tablet) {
+			width: 600px;
+		}
+		@include breakpoint($phone) {
+			width: 350px;
+		}
+		@include breakpoint($iPhone) {
+			width: 300px;
+		}
+		img {
+			cursor: none;
+			outline: none;
+		}
+		cursor: none;
+	}
+	.slick-active {
+		cursor: none;
+		@include breakpoint($large-desktop) {
+			width: 65vw;
+		}
+		@include breakpoint($tablet) {
+			width: 600px;
+			padding:0;
+			height: auto;
+			margin:0 -10px;
+		}
+		@include breakpoint($phone) {
+			width: 350px;
+			padding:0;
+			height: auto;
+			margin:0 -10px;
+		}
+		@include breakpoint($iPhone) {
+			width: 300px;
+		}
+		img {
+			width: 80%;
+			// margin: auto;
+			// padding:0;
+			margin-left: auto;
+			margin-right: auto;
+			overflow: hidden;
+			position: relative;
+			top: 35px;
+			cursor: none;
+			@include breakpoint($large-desktop) {
+				width: 90%;
+				top:45px;
+			}
+			@include breakpoint($tablet) {
+				top:18px;
+				width: 80%;
+			}
+			@include breakpoint($phone) {
+				top:0;
+				width: 90%;
+			}
+		}
+	}
+	.slick-current {
+		cursor: none;
+		@include breakpoint($large-desktop) {
+			width: 65vw;
+		}
+		@include breakpoint($phone) {
+			width: 600px;
+		}
+		@include breakpoint($phone) {
+			width: 350px;
+		}
+		@include breakpoint($iPhone) {
+			width: 300px;
+		}
+		img {
+			transition: .3s cubic-bezier(1,1,1,1);
+			width: 90%;
+			margin: 0 auto;
+			overflow: hidden;
+			position: relative;
+			top: 0px;
+			cursor: none;
+			@include breakpoint($large-desktop) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+#customCursor {
+	cursor: none;
+	width: 118px;
+	height: 32px;
+	background: url('../masseriaTheme/images/arrow.png') no-repeat left top;
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
